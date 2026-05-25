@@ -1,4 +1,4 @@
-// backend/app/routers/posts.py
+
 import os
 from fastapi import APIRouter, Depends, HTTPException
 from sqlmodel import Session, select
