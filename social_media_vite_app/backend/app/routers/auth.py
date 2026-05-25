@@ -1,4 +1,4 @@
-// backend/app/routers/auth.py
+
 import os
 from fastapi import APIRouter, Depends
 from sqlmodel import Session, select
