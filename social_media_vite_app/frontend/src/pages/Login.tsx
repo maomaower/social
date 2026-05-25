@@ -38,7 +38,7 @@ export default function Login() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8000/auth/login", null, {
+      const response = await axios.post("https://social-latest.onrender.com/auth/login", null, {
         params: { username },
       });
       const { user_id, username: returnedName } = response.data;

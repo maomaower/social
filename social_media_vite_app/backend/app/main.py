@@ -12,7 +12,7 @@ create_db_and_tables()
 # CORS configuration for the Vite dev server (http://localhost:5173)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

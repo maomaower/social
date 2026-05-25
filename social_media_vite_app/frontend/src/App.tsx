@@ -9,7 +9,7 @@ function App() {
 
   const handleLogin = async (name: string) => {
     try {
-      const res = await axios.post("http://localhost:8000/auth/login", null, {
+      const res = await axios.post("https://social-latest.onrender.com/auth/login", null, {
         params: { username: name },
       });
       setUsername(res.data.username);
