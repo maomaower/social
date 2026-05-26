@@ -19,7 +19,7 @@ jobs:
         run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
       - name: Build Image
-        run: docker build -t ghcr.io/${{ github.repository_owner }}/social:latest ./social_media_vite_app/backend
+        run: docker build -f ./social_media_vite_app/Dockerfile -t ghcr.io/${{ github.repository_owner }}/social:latest ./social_media_vite_app
 
       - name: Push Image
         run: docker push ghcr.io/${{ github.repository_owner }}/social:latest
