@@ -21,7 +21,7 @@ export default function NavBar({ username, onLogout }: NavBarProps) {
       zIndex: 10
     }}>
       <div style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
-        <Link to="/feed" style={{
+        <Link to="/feed" onClick={(e) => { if (window.location.pathname === '/feed') window.location.reload(); }} style={{
           fontSize: "1.5rem",
           fontWeight: "bold",
           color: "var(--text-h)",
@@ -33,7 +33,7 @@ export default function NavBar({ username, onLogout }: NavBarProps) {
           SocioSpire
         </Link>
         {username && (
-          <Link to="/feed" style={{
+          <Link to="/feed" onClick={(e) => { if (window.location.pathname === '/feed') window.location.reload(); }} style={{
             color: "var(--text)",
             textDecoration: "none",
             fontSize: "0.95rem"
