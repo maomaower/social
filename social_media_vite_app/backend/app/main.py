@@ -9,7 +9,7 @@ app = FastAPI(title="Social Media API")
 # Initialize the SQLite database (creates tables if they don't exist)
 create_db_and_tables()
 
-# CORS configuration for the Vite dev server (http://localhost:5173)
+# CORS configuration for the Vite dev server https://social-latest.onrender.com
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
